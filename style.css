@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #2f70ff; /* Blue background for the game */
+}
+
+.wrapper {
+    background-color: #ffffff; /* White background for the game area */
+    height: 37.5em;
+    width: 37.5em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 0.5em; /* Slightly rounded corners */
+}
+
+.simon {
+    height: 31.25em;
+    width: 31.25em;
+    background-color: #101010; /* Dark circle for the Simon game */
+    border-radius: 50%; /* Make it a circle */
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.color-part {
+    height: 13.12em;
+    width: 13.12em;
+    position: absolute;
+    cursor: pointer; /* Show pointer on hover */
+}
+
+.color1 {
+    background-color: #027802; /* Green color */
+    border-radius: 13em 0 0 0; /* Top left corner rounded */
+    top: 1.87em;
+    left: 1.87em;
+}
+
+.color2 {
+    background-color: #950303; /* Red color */
+    border-radius: 0 13em 0 0; /* Top right corner rounded */
+    top: 1.87em;
+    right: 1.87em;
+}
+
+.color3 {
+    background-color: #01018a; /* Blue color */
+    bottom: 1.87em;
+    right: 1.87em;
+    border-radius: 0 0 13em 0; /* Bottom right corner rounded */
+}
+
+.color4 {
+    background-color: #919102; /* Yellow color */
+    bottom: 1.87em;
+    left: 1.87em;
+    border-radius: 0 0 0 13em; /* Bottom left corner rounded */
+}
+
+.simon:before {
+    position: absolute;
+    content: "";
+    background-color: #101010;
+    height: 13.75em;
+    width: 13.75em;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%; /* Inner circle effect */
+}
+
+#count {
+    background-color: #ffffff; /* White background for score display */
+    font-size: 2.5em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    height: 2em;
+    width: 3em;
+    display: grid;
+    place-items: center; /* Center the text */
+    border-radius: 0.3em; /* Rounded corners */
+}
+
+.hide {
+    display: none; /* Use this class to hide elements */
+}
+
+.container {
+    background-color: #2d65de; /* Light blue background for main container */
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center items vertically and horizontally */
+}
+
+.container button {
+    background-color: #ffffff; /* White button */
+    font-size: 1.2em; /* Larger text */
+    border: none; /* No border */
+    outline: none; /* No outline */
+    padding: 1em 2em; /* Button padding */
+    border-radius: 0.3em; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.container p {
+    font-size: 2em; /* Large font size for messages */
+    color: #ffffff; /* White text color */
+    margin-bottom: 1em; /* Space below the text */
+}
+
+.container span {
+    font-weight: 600; /* Bold text */
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 10px; /* Smaller font on mobile */
+    }
+
+    .wrapper {
+        height: 35em;
+        width: 35em; /* Adjust size for mobile */
+    }
+}
